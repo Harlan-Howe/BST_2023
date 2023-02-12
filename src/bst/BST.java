@@ -29,7 +29,7 @@ public class BST {
         File inputFile = new File("word_list_moby_crossword.flat.txt");
         try
         {
-            BufferedReader reader = new BufferedReader(new FileReader(new File("word_list_moby_crossword.flat.txt")));
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             String word;
             while((word = reader.readLine())!=null)
             {
@@ -75,7 +75,7 @@ public class BST {
     }
 
     /**
-     * recursive method to draw the tree, tabbing in for each branches left and right children, so that the tree is
+     * recursive method to draw the tree, tabbing in for each branch's left and right children, so that the tree is
      * printed sideways, with the root at leftmost.
      * @param prefix - the string to draw at the beginning of the line before the left, self, and right nodes, typically a series of tabs.
      * @param subroot - which TreeNode will serve as the root of this section of the tree.
@@ -132,12 +132,14 @@ public class BST {
     }
 
     /**
-     * prints a list of all the words in this tree (unindented) in reverse-alphabetical order.
+     * prints a list of all the words in this tree (un-indented) in reverse-alphabetical order.
      */
     public void printReverseOrder()
     {
         //TODO: write the code to make this work. This may need to be a wrapper method for a recursive call. (In which
         //  case, you'll need to write that recursive method.)
+
+        // Hint: look at the toString/subString methods for inspiration.
     }
 
 
@@ -172,6 +174,30 @@ public class BST {
     {
         //TODO: write the code to make this work. This may need to be a wrapper method for a recursive call. (In which
         //  case, you'll need to write that recursive method.)
+
+        // hint: how does the depth of a node in a tree relate to the depth of that same node if the root was just one
+        //       of the root's children?
+        // for example, compare depth of "G" in the following two trees:
+        // Tree 1:
+        //        A
+        //      C
+        //        D
+        //    E
+        // F
+        //        G
+        //      H
+        //        K
+        //    L
+        //        M
+        //      P
+        // Tree 2:
+        //     G
+        //   H
+        //     K
+        // L
+        //     M
+        //   P
+
         return -1; // temp code - replace this!
     }
     
